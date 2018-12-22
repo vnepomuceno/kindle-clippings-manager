@@ -1,0 +1,94 @@
+AllCops:
+  TargetRubyVersion: 2.5.1
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Layout/AlignParameters:
+  Exclude:
+    - 'Gemfile'
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolProc:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/ModuleFunction:
+  Enabled: false
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: false
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/Lambda:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/EmptyMethod:
+  Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Thorfile'
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    - '*_'
+    - '*'
+    - 'db'
+    - 'id'
+    - '_'
+
+Style/AccessModifierDeclarations:
+  Enabled: false
