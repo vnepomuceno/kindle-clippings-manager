@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUNDLE_GITHUB__COM: ${BUNDLE_GITHUB__COM}
+
+  tests:
+    extends: base
+    command: dockerize rspec
+    environment:
+      - MONGO_DB_URL=mongodb://general_mongo.local:27017/clippings_test
+    links:
+      - mongo
+
+  mongo:
+    image: mongo
