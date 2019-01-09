@@ -10,11 +10,12 @@ services:
 
   tests:
     extends: base
-    command: dockerize rspec
+    command: dockerize -wait tcp://kindle_mongo.local:27017 bundle exec "rubocop && thor test:spec"
     environment:
-      - MONGO_DB_URL=mongodb://general_mongo.local:27017/clippings_test
+      - MONGO_DB_URL=mongodb://kindle_mongo.local:27017/clippings_test
     links:
-      - mongo
+      - kindle_mongo:kindle_mongo.local
 
-  mongo:
-    image: mongo
+  kindle_mongo:
+    image: mongo:3.2
+    command: "--smallfiles"
