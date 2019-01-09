@@ -1,5 +1,4 @@
 require_relative '../types'
-require_relative 'highlight'
 
 module KindleClippings
   class Book < Dry::Struct

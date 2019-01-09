@@ -32,8 +32,8 @@ module KindleClippings
               location: clipping.location,
               page: clipping.page.to_s,
               type: clipping.type,
-            }
-          ]
+            },
+          ],
         )
       end
     end
