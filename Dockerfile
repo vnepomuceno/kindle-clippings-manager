@@ -1,4 +1,4 @@
-FROM ruby:2.5.1-slim
+FROM ruby:2.7.1-buster
 MAINTAINER Valter Nepomuceno <valter.nep@gmail.com>
 
 ENV APP_HOME /usr/src/app
@@ -15,7 +15,7 @@ RUN set -x \
     && NPROC=$(nproc --all) \
     && apt-get update \
     && apt-get install -y --force-yes ${BUILD_DEPENDENCIES} ${RUNTIME_DEPENDENCIES} \
-    && gem install bundler \
+    && gem install bundler:1.17.3 \
     && bundle install -j${NPROC} \
     && apt-get purge -y --force-yes ${BUILD_DEPENDENCIES} \
     && apt-get autoremove -y --force-yes \
