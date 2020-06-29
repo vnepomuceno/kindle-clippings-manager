@@ -13,7 +13,7 @@ Metrics/PerceivedComplexity:
 Metrics/CyclomaticComplexity:
   Max: 10
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Exclude:
     - 'Gemfile'
 
@@ -82,7 +82,7 @@ Naming/FileName:
 Bundler/OrderedGems:
   Enabled: false
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   AllowedNames:
     - '*_'
     - '*'
