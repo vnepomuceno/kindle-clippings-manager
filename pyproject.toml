@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "kindle-clippings-manager"
+version = "0.1.0"
+description = "Web app for importing and managing highlights and notes from your Kindle. "
+authors = ["Valter Nepomuceno <valter.nep@gmail.com>"]
+
+[tool.poetry.scripts]
+convert_to_json = "kindle_clippings_manager.import:convert_clippings_to_json"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+black = "^21.5b1"
+ftfy = "^6.0.1"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
