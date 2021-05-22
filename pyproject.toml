@@ -12,6 +12,7 @@ python = "^3.9"
 black = "^21.5b1"
 ftfy = "^6.0.1"
 click = "^8.0.1"
+Django = "^3.2.3"
 
 [tool.poetry.dev-dependencies]
 
